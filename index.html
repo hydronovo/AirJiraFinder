@@ -19,15 +19,29 @@
           var tr = null;
           var td = null;
           var tds = null;
-
           for ( var i = 0; i<rows.length-1; i++ ) {
               tr = document.createElement('tr');
               tds = rows[i].split(',');
-              for ( var j = 0; j < tds.length; j++ ) {
-                 td = document.createElement('td');
-                 td.innerHTML = tds[j];
-                 tr.appendChild(td);
-              }
+			  
+			  var air = "P" + tds[0];
+			  var airHref = "http://air.asml.com/u_qm_issues.do?sysparm_query=number=" + air;
+			  td = document.createElement('td');
+			  td.innerHTML = '<a href="'+airHref+'" target="_blank">'+air+'</a>';
+              tr.appendChild(td);
+			  
+			  td = document.createElement('td');
+			  if (tds[1] != "")
+			  {
+			    var jira = "YS-" + tds[1];
+			    var jiraHref = "http://apps-jira.asml.com:8080/browse/" + jira; 
+			    td.innerHTML = '<a href="'+jiraHref+'" target="_blank">'+jira+'</a>';
+			  }
+			  tr.appendChild(td);
+			  
+			  td = document.createElement('td');
+			  td.innerHTML = tds[2];
+			  tr.appendChild(td);
+			  
               document.getElementById("dataTable").appendChild(tr);
           }
         }
@@ -46,7 +60,7 @@
 </head>
 
 <body onload="loadFiles();">
-<div class="wrapper">
+<!-- <div class="wrapper"> -->
   <table id="dataTable">
     <tr>
        <th>Air</th>
@@ -54,6 +68,6 @@
        <th>Title</th>
      </tr>
    </table>
- </div>
+ <!-- </div> -->
 </body>
 </html>
