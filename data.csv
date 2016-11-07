@@ -1,5 +1,11 @@
-000001,9001,Out of memory,Open
-000002,9002,Wrong EC,Closed
-000003,10000,Remove buttom,Open
-000004,10001,Who knows?,Closed
-000005,10001,Who knows?,Closed
+250071,10616,Pleora 64 bit
+252234,9681,FreeImage
+255402,10145,Remove Focus fall back mode from DarkfieldInternalGhost and PupilInternalGhost
+268932,12001,DarkfieldInternalGhost ECs for some WLs are lost in upgrade SP8 to SP9
+269318,12085,Task 356 default input change
+269908,,Measuring timeout during OV measurements of Production at SP7.2 b3 hangs on Cognex
+270326,12158,Build issue ys300c_sp_09 fails on Nightly Replays replay-s350-uDBF-Hxx.bat
+270374,12162,ys300c_sp_10 fails on Continuous TICS
+251286,9398,Verify Task #221 Illumination Spot Homogeneity Calibration
+264793,,Task #92 and #328 DF Internal Ghost Calibration Performance run out of memory
+123456,34234,sdf
